@@ -1,0 +1,13 @@
+#menu li a:before {
+  content: "";
+  width: 60px;
+  position: absolute;
+  border-bottom: 8px solid #313131;
+  bottom: 0;
+  right: 350px;
+  transition: 0.7s all;
+}
+
+#menu li a:hover:before {
+  right: 0;
+}

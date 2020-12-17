@@ -1,0 +1,47 @@
+// Animacion menu
+
+.header__menu__items li a{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    transition: 0.7s all;
+    padding: 0 0 0.3rem 0;  
+}
+
+.header__menu__items li a:before{
+    content: '';
+    width: 100%;
+    position: absolute;
+    border-bottom: 8px solid $blanco;
+    bottom: 0;
+    right: 350px;
+    transition: 0.7s all;
+}
+    .header__menu__items li a:hover:before{
+    right: 0;
+}
+
+
+// Animacion boton1
+
+.experiencia__elemento a{
+    width: 6rem;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    transition: 0.7s all;
+    padding: 0 0 0.3rem 0;  
+}
+
+.experiencia__elemento a:before{
+    content: '';
+    width: 100%;
+    position: absolute;
+    border-bottom: 8px solid $branding-azul;
+    bottom: 0;
+    right: 350px;
+    transition: 0.7s all;
+}
+    .experiencia__elemento a:hover:before{
+    right: 0;
+}

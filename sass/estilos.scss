@@ -1,26 +1,16 @@
+@import 'grid';
 @import 'variables';
+@import 'animaciones';
 
+
+// Estilos generales
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-h3{
-    text-transform: $estilo-h3;
-    color: $color-h3;
-}
-
-.trabajos__articulo__parrafo{
-    border: $info-decoracion;
-    padding: 1rem;
-    margin-bottom: 1rem;
-}
-
-body{
-    font-family:sans-serif;
-    line-height: 1.3;
-    background-color: #fffad2;
+body {
+    font-family: 'Montserrat', sans-serif;
 }
 
 a{
@@ -31,226 +21,144 @@ li {
     list-style: none;
 }
 
-.contenedor{
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
+h1{
+    color: $secundarios-azul;
+    @include tipo (2.5rem, 500)
 }
 
-header .contenedor{
-    justify-content: space-between;
-    align-items:center;
+h2{
+    color: $branding-azul;
+    @include tipo (4rem, 600) 
 }
 
-header ul{
-    display: flex;
+h3{
+    color: $branding-azul;
+    @include tipo (2.5rem, 500) 
 }
 
-header ul li{
-    margin-right: 2rem;
+h4{
+    color: $branding-azul;
+    @include tipo (2rem, 500) 
 }
 
-section{
-    margin: 3rem 2rem;
-}
-
-header{
-    background-color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-}
-
-nav li a {
-    text-transform: uppercase;
-}
-
-.mi_info{
-    background-color: white;
-    padding: 2rem 1rem;
-}
-
-.presentacion{
-    font-style: italic;
-}
 p{
-    font-size: 20px;
-}
-h1{
-    color: darkblue;
-}
-h2{
-    color: darkgreen;
+    color: $branding-azul;
+    margin: 3.5rem 0 3.5rem 0;
+    @include tipo (1.5rem, 400) 
 }
 
-li{
-    list-style-position: inside;
+.boton1{
+    @include boton (1rem, 700, $branding-azul, $branding-amarillo);
+
+    &:hover {
+        @include boton (1rem, 700, $branding-azul, $secundarios-amarillo);
+    }
 }
 
-.trabajos .educacion{
-    width: auto;
-    border: outset 1px #ffb15c;
-    padding: 2rem 1rem;
-    display: inline-block;
+.boton2{
+    @include boton (1rem, 700, $branding-amarillo, $branding-azul);
+
+    &:hover {
+        @include boton (1rem, 700, $blanco, $secundarios-azul);
+    }
 }
 
-.mi_info img{
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    transform: scale(1);
-    transition: 0.3s;
-}
+.boton3{
+    @include boton1;
 
-.mi_info img:hover{
-    transform: scale(1.1);
-}
-
-
-.seccion article{
-    padding: 2rem;
-}
-
-.seccion img{
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    &:hover {
+        @include boton1;
+    }
 }
 
 
-footer{
-    background-color: white;
-}
+//Estilos del header
 
-footer .contenedor{
+header {
+    background-color: $branding-amarillo;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
 }
 
-footer div{
-    width: auto;
-    display: inline-block;
-    margin: 2em 1em;
-}
-
-.trabajos article{
-    margin-top: 2rem;
-}
-
-.portafolio__img li img {
-    transform: scale(1);
-    transition: 0.3s;
-}
-
-.portafolio__img li img:hover{
-    transform: scale(1.1);
-}
-
-.portafolio__titulo{
-    margin-bottom: 2rem;
-}
-
-.contenedor .portafolio__filtro{
+.header__menu__items{
     display: flex;
-    justify-content: space-evenly;
-}
+    align-items: center;
+    padding-top: 0.3rem;
 
-.portafolio__filtro li{
-    padding: 1rem;
-    margin-bottom: 4rem;
-    border: solid 1px #ffb15c;
-}
-
-.section__trabajos{
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-}
-
-.section__trabajos article{
-    padding: 0.8rem;
-}
-
-.section__trabajos p{
-    padding-bottom: 1rem;
-}
-
-.section__trabajos h3{
-    padding-bottom: 1rem;
-}
-
-.conocimiento{
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-}
-
-.traedu{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-column-gap: 0.5rem;
-}
-
-@media screen and (max-width: 500px){
-    .traedu{
-        display: grid;
-        grid-template-columns: 100%;
-        grid-column-gap: 0.5rem;
+    li{
+        margin-left: 2rem;
     }
-    .conocimiento{
-        display: grid;
-        grid-template-columns: 100%;
+
+    a{
+        color: $branding-azul;
+        @include tipo (1rem, 600)
     }
-    .mi_info .contenedor{
-        display: block
+}
+
+    .header__redes__in{
+        color: $branding-azul;
+        margin-right: 1.5rem;
+
+        &:hover {
+            color: $secundarios-azul
+        }
+
+        i.fa-linkedin-in{
+            font-size: 2rem;
+        }
     }
-    .trabajos{
-        display: grid;
-        grid-template-columns: 100%;
+
+    .header__redes__be{
+        color: $branding-azul;
+        margin-right: 1.5rem;
+        
+        &:hover {
+            color: $secundarios-azul
+        }
+
+        i.fa-behance{
+            font-size: 2rem;
+        }
+
     }
+
+// Estilos del Main
+
+main{
+    margin: 6rem 0 6rem 0;
+}
+
+    // Estilos seccion presentacion
     
-}
-
-@media screen and (max-width: 800px){
-    .traedu{
-        display: grid;
-        grid-template-columns: 100%;
-        grid-column-gap: 0.5rem;
-    }
-    .conocimiento{
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }
-    .mi_info .contenedor{
-        display: block
-    }
-    .trabajos{
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }
+section{
+    display: flex;
     
+    .presentacion__div1{
+        background-color: $branding-amarillo;
+    }
+
+    .presentacion__div2{
+        background-color: $branding-amarillo;
+    }
+
+}
+.presentacion__info__boton{
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+    margin: 0rem 0 6rem 0;
 }
 
-@keyframes titulos_colores{
-    0% {color: #395732 ;}
-    25% {color: #305A49;}
-    50% {color: #315A5E;}
-    75% {color:#355384;}
-    100% {color: #354283;}
-}
 
-h1{
-    animation: titulos_colores 5s ease-in infinite alternate-reverse;
-}
+//Estilo de Experiencia laboral
 
-h2{
-    animation: titulos_colores 5s ease-in infinite alternate-reverse;
+.experiencia__h3{
+    margin-bottom: 3rem;
 }
+.experiencia__elemento{
+    @include caja;
+    margin: 3rem 2rem;
 
-.tareas__listado__item{
-    padding-bottom: 1rem;
-}
 
-.tareas__titulo{
-    margin-bottom: 1rem;
-}
-
-.trabajos__articulo__elementos__item{
-    margin-bottom: 1rem;
 }

@@ -1,0 +1,53 @@
+// grid general
+
+section.grid{
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-column-gap: 2rem;
+    grid-template-areas: 
+        "div1 div1 div1 info info info info info info info div2 div2 div2 div2 div2 div2 div2 div2"
+    ;
+    
+}
+
+//Grid de presentacion
+
+.presentacion__div1{
+    grid-area: div1;
+}
+
+.presentacion__info{
+    grid-area: info;
+}
+
+.presentacion__div2{
+    grid-area: div2;
+}
+
+// Experiencia flex
+
+.experiencia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6rem;
+
+    .experiencia__elementos{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .experiencia__elemento{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            justify-content: space-between;
+
+            img{
+                width: 100%;
+            }
+        }
+
+    }
+
+}

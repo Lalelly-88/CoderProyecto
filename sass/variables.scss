@@ -1,0 +1,44 @@
+//sistema de colores
+$branding-amarillo: #FCC700;
+$branding-azul: #203240;
+$secundarios-amarillo: #FFD545;
+$secundarios-azul: #3A5B6E;
+$boolenaos-error: #A42202;
+$boolenaos-correcto: #325D41;
+$grises-negro: #0C0C0C;
+$grises-gris: #595959;
+$blanco: #FFFFFF;
+
+
+//sistema de tipografias
+@mixin tipo ($tamano, $grosor) {
+    font-size: $tamano;
+    font-weight: $grosor;
+}
+
+
+//sistema de botones
+@mixin boton ($tamano, $grosor, $colort, $fondo) {
+    font-size: $tamano;
+    font-weight: $grosor;
+    color: $colort;
+    background-color: $fondo;
+    border-radius: 0.5rem;
+    padding: 1rem 3rem 1rem 3rem;
+}
+
+@mixin boton1 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: $branding-azul;
+}
+
+    //Cajas contenedoras
+    @mixin caja {
+        width: 22rem;
+        height: 16rem;
+        border-radius: 0.5rem;
+        background-color: $blanco;
+        padding: 2rem 3rem 2rem 3rem;
+        box-shadow: 0px 10px 20px -6px rgba(163, 163, 163, 0.418);
+    }
